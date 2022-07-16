@@ -5,7 +5,7 @@ import {experience} from '../../Data/Data';
 function Experience(){
     const experienceArray = experience.slice(0).reverse()
     return(
-        <section className="section-start">
+        <section className="section-start experience-bg">
             <div className="container">
                 <div className="row">
                     <div className="col-lg-12">

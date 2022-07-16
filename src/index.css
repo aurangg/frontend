@@ -489,6 +489,12 @@ body {
   margin-top:40px;
   margin-bottom: 40px;
 }
+.experience-bg{
+  background-image: url(/public/img/experience-bg.svg);
+  background-position: top;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
 .second-experience-box{
   display: flex;
   justify-content: space-between;
@@ -504,7 +510,7 @@ body {
 }
 .experience-list{
   padding: 20px;
-  background: transparent;
+  background-color: #151515;
   border-bottom: 1px solid rgba(119, 248, 89, 0.7);
   margin-block: 30px;
   border-radius: 10px;

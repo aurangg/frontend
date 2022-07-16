@@ -16,9 +16,18 @@ const Toolbar = props => (
             <div className="toolbar-navigation-items">
                 <ul>
                     <li>
-                        <Link to="/">
+                        <Link to="/main">
+                            First
+                        </Link>
+                    </li>
+                    <li>
+                        <Link to="/second">
+                            Second
+                        </Link>
+                    </li>
+                    <li>
+                        <Link to="/main">
                             Resume
-                            {/* <img src={`${process.env.PUBLIC_URL}/images/logout.svg`} alt="menu-icon" /> */}
                         </Link>
                     </li>
                 </ul>
