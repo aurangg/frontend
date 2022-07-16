@@ -21,13 +21,13 @@ function App() {
     backdrop = <Backdrop click = {backdropClickHandler} />
   }
   return (
-    <BrowserRouter basename='/main'>
+    <BrowserRouter basename='/'>
       <React.Fragment>
         <Toolbar />
         <Sidedrawer />
         {backdrop}
         <Routes>
-          <Route path="/" element={<Home />} />
+          <Route path="/main" element={<Home />} />
           <Route path="/second" element={<Second />} />
         </Routes>
       </React.Fragment>
