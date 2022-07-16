@@ -1,24 +1,37 @@
-import logo from './logo.svg';
+import React, { useState } from 'react';
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import './App.css';
+import Backdrop from './Components/Navbar/Backdrop';
+import Sidedrawer from './Components/Navbar/Sidedrawer';
+import Toolbar from './Components/Navbar/Toolbar';
+import Home from './Components/Home/Home';
+import Second from './Components/Second/Second';
 
 function App() {
+  const [sideDrawerOpen, setSideDrawerOpen] = useState(false)
+
+  function drawerToggleClickHandler(){
+    setSideDrawerOpen(!sideDrawerOpen)
+  }
+  function backdropClickHandler(){
+    setSideDrawerOpen(!sideDrawerOpen)
+  }
+  let backdrop;
+  if(sideDrawerOpen){
+    backdrop = <Backdrop click = {backdropClickHandler} />
+  }
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <BrowserRouter basename='/'>
+      <React.Fragment>
+        <Toolbar />
+        <Sidedrawer />
+        {backdrop}
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/second" element={<Second />} />
+        </Routes>
+      </React.Fragment>
+    </BrowserRouter>
   );
 }
 
