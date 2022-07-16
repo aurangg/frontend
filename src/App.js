@@ -21,7 +21,7 @@ function App() {
     backdrop = <Backdrop click = {backdropClickHandler} />
   }
   return (
-    <BrowserRouter basename='/'>
+    <BrowserRouter basename='/main'>
       <React.Fragment>
         <Toolbar />
         <Sidedrawer />
