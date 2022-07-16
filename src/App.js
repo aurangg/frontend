@@ -27,7 +27,7 @@ function App() {
         <Sidedrawer />
         {backdrop}
         <Routes>
-          <Route path="/" element={<Home />} />
+          <Route path="/main" element={<Home />} />
           <Route path="/second" element={<Second />} />
         </Routes>
       </React.Fragment>
